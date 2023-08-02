@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React, { ReactNode } from "react";
 import { ChildrenStringProps } from "lib/types";
 import { COLOR_SPOTIFY_GREEN, COLOR_BLACK } from "lib/colorPalette";
 
@@ -11,7 +12,7 @@ const Exp = ({ children }: ChildrenStringProps) => <h4>{children}</h4>;
 export const Education = () => {
   const [isShowingFullEducation, showFullEducation] = useState(false);
 
-  const Step = ({ children }) => (
+  const Step = ({ children }: { children: ReactNode }) => (
     <ul style={{ paddingLeft: '20px', fontSize: '18px', listStyle: 'none' }}>
       <li style={{ position: 'relative', paddingLeft: '20px', marginBottom: '8px' }}>
         <div
@@ -31,11 +32,11 @@ export const Education = () => {
     </ul>
   );
 
-  const Title = ({ children }) => (
+  const Title = ({ children }: { children: ReactNode }) => (
     <p className="title" style={{ marginBlockStart: -20, fontSize: '1rem'}}><em>{children}</em></p>
   );
 
-  const Year = ({ children }) => (
+  const Year = ({ children }: { children: ReactNode }) => (
     <p style={{ color: 'grey', marginBlockStart: -20, fontSize: '1rem'}}>{children}</p>
   );
 
