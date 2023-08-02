@@ -1,5 +1,5 @@
-import React from "react";
-import { IconContext } from "react-icons";
+import React, { ReactElement } from "react";
+import { IconContext, IconType } from "react-icons";
 import {
   FaPython,
   FaChartLine,
@@ -30,10 +30,15 @@ import {
   VscLibrary
 } from "react-icons/vsc";
 
-const Skill = ({ icon, name }) => (
+interface SkillProps {
+  icon: ReactElement<IconType>; // Explicitly typing the icon prop as ReactElement of IconType
+  name: string; // Explicitly typing the name prop as a string
+}
+
+const Skill = ({ icon, name }: SkillProps) => (
   <li style={{ display: "flex", alignItems: "center", marginBottom: "8px" }}>
     <IconContext.Provider value={{ size: "24px", style: { marginRight: "10px" } }}>
-    {React.cloneElement(icon, { className: "skill-item" })}
+    {React.cloneElement(icon, { className: "skill-item" } as Partial<IconType>)} {/* Use type assertion 'as Partial<IconType>' */}
     </IconContext.Provider>
     <span>{name}</span>
   </li>
