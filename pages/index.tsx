@@ -10,7 +10,7 @@ import { devices } from "lib/displayDevice";
 
 import { Flex } from "components/Layout/Container/styles";
 
-import ProfilePicture from "public/assets/png/Nicolas Pogeant Propre.jpg";
+import ProfilePicture from "public/assets/png/npogeant.png";
 
 export default function Home() {
   return (
@@ -21,14 +21,14 @@ export default function Home() {
           <h2>Data Scientist</h2>
           <p>
           Enthusiastic Data Scientist with over <b>2 years of experience</b> in diverse fields, blending analytical expertise with 
-          cutting-edge technologies to create powerful and efficient data-driven solutions. My passion lies in developing <b>NLP </b> 
+          cutting-edge technologies to create powerful and efficient data-driven solutions. <br /> <br /> My passion lies in developing <b>NLP </b> 
           models for language understanding, implementing <b>MLOps</b> practices to streamline machine learning workflows, and 
           crafting sophisticated <b>RecSys</b> algorithms to deliver personalized and engaging user experiences.
           </p>
           <ResumeDownloadLink />
         </ContentWrapper>
         <RightFlex>
-          <RoundImage src={ProfilePicture} alt="Picture of Nicolas" width={150} height={150} />
+          <RoundImage src={ProfilePicture} alt="Picture of Nicolas" width={280} height={280} />
           {/* Social Media Links */}
           <SocialMediaWrapper>
             <SocialMediaIcon href="https://github.com/npogeant" target="_blank">
@@ -94,7 +94,7 @@ const SocialMediaWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-top: 1rem;
-  margin-left: 1rem;
+  margin-left: 5rem;
 
   /* Add any spacing between icons */
   gap: 1rem;
