@@ -28,7 +28,7 @@ export default function Home() {
           <ResumeDownloadLink />
         </ContentWrapper>
         <RightFlex>
-          <RoundImage src={ProfilePicture} alt="Picture of Nicolas" width="150px" height="150px" />
+          <RoundImage src={ProfilePicture} alt="Picture of Nicolas" width={150} height={150} />
           {/* Social Media Links */}
           <SocialMediaWrapper>
             <SocialMediaIcon href="https://github.com/npogeant" target="_blank">

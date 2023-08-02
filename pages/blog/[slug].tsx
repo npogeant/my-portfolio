@@ -28,9 +28,9 @@ export default function Blog({ filteredPost, title }: BlogProps) {
         <AuthorContainer>
           <RoundImage
             src={ProfilePicture}
-            alt="Picture of Lasha"
-            width="45px"
-            height="45px"
+            alt="Picture of Nicolas"
+            width={45} // Use a numeric value instead of "45px"
+            height={45} // Use a numeric value instead of "45px"
           />
           <h4>Nicolas Pogeant / {formatDate(filteredPost.pubDate)}</h4>
         </AuthorContainer>

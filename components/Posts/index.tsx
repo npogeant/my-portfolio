@@ -15,24 +15,24 @@ export const Posts = ({ title }: StringProps) => {
       <h3>{title}</h3>
       {data?.feed?.map((item: PostsProps, id: number) => {
         return (
-          <Link href={`/blog/${convertToSlug(item.title)}`} key={id}>
-            <Item>
-              <Flex>
+          <div key={id}>
+            <Link href={`/blog/${convertToSlug(item.title)}`}>
+              <Item>
                 <Flex>
-                  <span className="item-number">{`${id < 9 ? "0" : ""}${
-                    id + 1
-                  }`}</span>
-                  <h4>{item.title.substring(0, 65)}</h4>
+                  <Flex>
+                    <span className="item-number">{`${id < 9 ? "0" : ""}${id + 1}`}</span>
+                    <h4>{item.title.substring(0, 65)}</h4>
+                  </Flex>
+                  <span>{formatDate(item.pubDate)}</span>
                 </Flex>
-                <span>{formatDate(item.pubDate)}</span>
-              </Flex>
-              <PostsDescription
-                dangerouslySetInnerHTML={{
-                  __html: item.description.substring(0, 300) + "...",
-                }}
-              />
-            </Item>
-          </Link>
+                <PostsDescription
+                  dangerouslySetInnerHTML={{
+                    __html: item.description.substring(0, 300) + "...",
+                  }}
+                />
+              </Item>
+            </Link>
+          </div>
         );
       })}
     </Container>
