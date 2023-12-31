@@ -25,7 +25,7 @@ export default function Home() {
           models for language understanding, implementing <b>MLOps</b> practices to streamline machine learning workflows, and 
           crafting sophisticated <b>RecSys</b> algorithms to deliver personalized and engaging user experiences.
           </p>
-          <ResumeDownloadLink />
+          {/* <ResumeDownloadLink /> */}
         </ContentWrapper>
         <RightFlex>
           <RoundImage src={ProfilePicture} alt="Picture of Nicolas" width={280} height={280} />
