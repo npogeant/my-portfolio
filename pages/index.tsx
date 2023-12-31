@@ -105,13 +105,13 @@ const SocialMediaIcon = styled.a`
   /* No need for additional styling with NextImage component */
 `;
 
-const ResumeDownloadLink = () => {
-  // Replace the resume file URL with the actual URL of your resume file
-  const resumeFileUrl = "public/assets/CV Nicolas Pogeant.pdf";
+// const ResumeDownloadLink = () => {
+//   // Replace the resume file URL with the actual URL of your resume file
+//   const resumeFileUrl = "public/assets/CV Nicolas Pogeant.pdf";
 
-  return (
-    <a href={resumeFileUrl} download="Resume Nicolas Pogeant.pdf">
-      Download my resume
-    </a>
-  );
-};
+//   return (
+//     <a href={resumeFileUrl} download="Resume Nicolas Pogeant.pdf">
+//       Download my resume
+//     </a>
+//   );
+// };
