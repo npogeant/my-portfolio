@@ -107,10 +107,10 @@ const SocialMediaIcon = styled.a`
 
 const ResumeDownloadLink = () => {
   // Replace the resume file URL with the actual URL of your resume file
-  const resumeFileUrl = "/path/to/your/resume.pdf";
+  const resumeFileUrl = "public/assets/CV Nicolas Pogeant.pdf";
 
   return (
-    <a href={resumeFileUrl} download="YourResumeName.pdf">
+    <a href={resumeFileUrl} download="Resume Nicolas Pogeant.pdf">
       Download my resume
     </a>
   );
